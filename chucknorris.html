@@ -3,10 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="chuck.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Chuck Norris</title>
 	</head>
 	<body>
-        <button id="randomChuck">Get a new random quote</button>
+		<h1>Chuck Norris</h1>
+		<div id="formRandomJoke">
+			<form action="submit" id="formCategories">
+				<button type="submit" id="categorySubmit">
+					Get a quote from this category
+				</button>
+			</form>
+			<button id="delete">Delete all the jokes</button>
+		</div>
 		<script src="chuck.js" defer></script>
 	</body>
 </html>
