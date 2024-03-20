@@ -57,6 +57,6 @@ function displayRules(rules) {
 			listElement.innerText = element;
 			list.append(listElement);
 		});
-		document.body.append(list);
+		buttonBeCode.after(list);
 	}
 }

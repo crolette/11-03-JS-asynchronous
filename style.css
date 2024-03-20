@@ -138,17 +138,35 @@ table {
 /* END RESET CSS */
 
 button {
-	background: black;
-	padding: 4px;
-	box-shadow: 5px 5px 5px black;
 	cursor: pointer;
+	padding: 8px;
 	transition: 0.3s;
 }
 
 button:hover {
+	transform: scale(0.95);
+}
+
+button#becode {
+	background: black;
+	box-shadow: 5px 5px 5px black;
+
+	color: white;
+
+	img {
+		margin-top: 8px;
+	}
+}
+
+button#becode:hover {
 	background: red;
 	box-shadow: 5px 5px 5px rgb(131, 131, 131);
-	transform: scale(0.95);
+}
+
+button#goToChuck {
+	margin-top: 16px;
+	border-radius: 4px;
+	background: #eba028;
 }
 
 ol {

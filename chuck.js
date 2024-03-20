@@ -3,6 +3,7 @@ const formCategories = document.getElementById('formCategories');
 formCategories.addEventListener('submit', async (e) => {
 	e.preventDefault();
 	const selectedCategory = document.getElementById('selectedCategory');
+	console.log(selectedCategory.value);
 	let randomJoke = '';
 	if (selectedCategory.value == 'none') {
 		randomJoke = await getRandomJoke();
@@ -123,6 +124,15 @@ function clearStorage() {
 	localStorage.clear();
 }
 
+const deleteButton = document.getElementById('delete');
+
+deleteButton.addEventListener('click', (e) => {
+	e.preventDefault();
+	localStorage.removeItem('jokes');
+	let mainElement = document.getElementById('jokes');
+	mainElement.innerHTML = '';
+});
+
 document.addEventListener('DOMContentLoaded', async (e) => {
 	createSelect();
 	createMain();
@@ -130,12 +140,4 @@ document.addEventListener('DOMContentLoaded', async (e) => {
 	jokes.forEach((element) => {
 		displayJoke(element);
 	});
-});
-
-const deleteButton = document.getElementById('delete');
-
-deleteButton.addEventListener('click', () => {
-	localStorage.removeItem('jokes');
-	let mainElement = document.getElementById('jokes');
-	mainElement.remove();
 });

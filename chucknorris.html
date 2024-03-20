@@ -4,23 +4,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="chuck.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap"
-			rel="stylesheet"
-		/>
+
 		<title>Chuck Norris</title>
 	</head>
 	<body>
-		<h1>Chuck Norris</h1>
-		<div id="formRandomJoke">
+		<h1>Chuck Norris Random Quotes</h1>
+		<div class="formRandom">
 			<form action="submit" id="formCategories">
 				<button type="submit" id="categorySubmit">
+					<span class="material-symbols-outlined"> add_box </span>
 					Get a quote from this category
 				</button>
 			</form>
-			<button id="delete">Delete all the jokes</button>
+			<button id="delete" type="delete">
+				<span class="material-symbols-outlined"> delete</span> Delete all the
+				jokes
+			</button>
 		</div>
 		<script src="chuck.js" defer></script>
 	</body>

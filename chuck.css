@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 /* RESET CSS */
 html,
 body,
@@ -137,8 +139,71 @@ table {
 
 /* END RESET CSS */
 
-.body {
-	font-family: 'Patua One', serif;
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-size: 32px;
+	padding: 16px;
+}
+
+form#formCategories {
+	display: flex;
+	align-items: center;
+	background-color: rgb(113, 164, 106);
+	padding: 8px;
+}
+
+form#formCategories:hover {
+	background-color: rgb(164, 239, 154);
+}
+
+button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+}
+
+button#delete {
+	padding: 8px;
+	width: 100%;
+	background-color: red;
+}
+
+button#delete:hover {
+	background-color: rgb(248, 123, 123);
+}
+
+select {
+	display: inline;
+	margin-left: 8px;
+	padding: 4px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#jokes {
+	width: 70vw;
+}
+
+.chuckJoke {
+	font-family: 'Shadows Into Light', cursive;
 	font-weight: 400;
 	font-style: normal;
+	font-size: 26px;
+	margin-top: 8px;
+	padding: 8px;
+}
+
+.chuckJoke:nth-child(odd) {
+	background-color: rgb(61, 68, 112);
+	color: #fff;
+}
+
+.chuckJoke:nth-child(even) {
+	background-color: rgb(131, 188, 223);
 }
