@@ -89,19 +89,27 @@ async function getRandomCategoryJoke(selectedCategory) {
 }
 
 async function getLocalStorage() {
-	let jokes = await JSON.parse(localStorage.getItem('jokes'));
-	if (jokes == null) {
-		const storedJokes = createLocalStorage();
-		return storedJokes;
-	} else {
-		return jokes;
+	try {
+		let jokes = await JSON.parse(localStorage.getItem('jokes'));
+		if (jokes == null) {
+			const storedJokes = createLocalStorage();
+			return storedJokes;
+		} else {
+			return jokes;
+		}
+	} catch (error) {
+		console.log(error);
 	}
 }
 
 async function saveToLocalStorage(randomJoke) {
-	let jokesStored = await getLocalStorage();
-	jokesStored.push(randomJoke);
-	localStorage.setItem('jokes', JSON.stringify(jokesStored));
+	try {
+		let jokesStored = await getLocalStorage();
+		jokesStored.push(randomJoke);
+		localStorage.setItem('jokes', JSON.stringify(jokesStored));
+	} catch (error) {
+		console.log(error);
+	}
 }
 
 function createLocalStorage() {
@@ -128,4 +136,6 @@ const deleteButton = document.getElementById('delete');
 
 deleteButton.addEventListener('click', () => {
 	localStorage.removeItem('jokes');
+	let mainElement = document.getElementById('jokes');
+	mainElement.remove();
 });
